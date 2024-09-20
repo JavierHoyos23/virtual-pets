@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false;
 import "../styles/globals.css";
 
 const geistSans = localFont({
@@ -25,10 +28,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600;900&display=swap" rel="stylesheet" />
+      </head>
       <body>
         {children}
       </body>
     </html>
   );
 }
-
